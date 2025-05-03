@@ -39,6 +39,14 @@ window.addEventListener('DOMContentLoaded', event => {
     };
     f
 
+    <script>
+  const carousel = document.querySelector('#carousel12Gambar');
+  const carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 3000,
+    ride: 'carousel'
+  });
+</script>
+
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(

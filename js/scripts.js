@@ -37,7 +37,37 @@ window.addEventListener('DOMContentLoaded', event => {
             rootMargin: '0px 0px -40%',
         });
     };
-    f
+    
+
+body.classList.remove('light-mode', 'dark-mode');
+body.classList.add(savedTheme + '-mode');
+
+body.classList.toggle('dark-mode');
+body.classList.toggle('light-mode');
+
+
+  document.querySelectorAll('.service-card').forEach(card => {
+    const wrapper = document.createElement('a');
+    wrapper.href = 'https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20layanan%20' + encodeURIComponent(card.innerText.trim());
+    wrapper.target = '_blank';
+    wrapper.className = 'service-link';
+
+    card.parentNode.replaceChild(wrapper, card);
+    wrapper.appendChild(card);
+  });
+});
+
+
+    <script>
+  const carousel = document.querySelector('#carousel12Gambar');
+  const carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 3000,
+    ride: 'carousel'
+  });
+
+
+
+
 
     <script>
   const carousel = document.querySelector('#carousel12Gambar');
